@@ -1,0 +1,12 @@
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\bin\Debug\net8.0\Shared.Data.deps.json
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\bin\Debug\net8.0\Shared.Data.dll
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\bin\Debug\net8.0\Shared.Data.pdb
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.csproj.AssemblyReference.cache
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.AssemblyInfoInputs.cache
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.AssemblyInfo.cs
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.csproj.CoreCompileInputs.cache
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.dll
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\refint\Shared.Data.dll
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.pdb
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\ref\Shared.Data.dll
