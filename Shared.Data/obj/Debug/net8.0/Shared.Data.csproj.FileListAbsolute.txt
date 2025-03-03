@@ -10,3 +10,4 @@ D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\S
 D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\refint\Shared.Data.dll
 D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.pdb
 D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\ref\Shared.Data.dll
+D:\bekasker\projects\test\api-gateway-with-ocelot\Shared.Data\obj\Debug\net8.0\Shared.Data.sourcelink.json

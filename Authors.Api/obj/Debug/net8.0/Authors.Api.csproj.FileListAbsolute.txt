@@ -44,3 +44,4 @@ D:\bekasker\projects\test\api-gateway-with-ocelot\Authors.Api\obj\Debug\net8.0\r
 D:\bekasker\projects\test\api-gateway-with-ocelot\Authors.Api\obj\Debug\net8.0\Authors.Api.pdb
 D:\bekasker\projects\test\api-gateway-with-ocelot\Authors.Api\obj\Debug\net8.0\Authors.Api.genruntimeconfig.cache
 D:\bekasker\projects\test\api-gateway-with-ocelot\Authors.Api\obj\Debug\net8.0\ref\Authors.Api.dll
+D:\bekasker\projects\test\api-gateway-with-ocelot\Authors.Api\obj\Debug\net8.0\Authors.Api.sourcelink.json

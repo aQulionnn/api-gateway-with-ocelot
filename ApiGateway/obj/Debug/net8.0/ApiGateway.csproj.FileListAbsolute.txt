@@ -41,3 +41,4 @@ D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\Mi
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\Ocelot.dll
+D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\obj\Debug\net8.0\ApiGateway.sourcelink.json

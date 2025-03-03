@@ -10,7 +10,14 @@
           "Host": "localhost",
           "Port": 5001
         }
-      ]
+      ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "15s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
     },
     {
       "UpstreamPathTemplate": "/books/{everything}",
@@ -22,7 +29,14 @@
           "Host": "localhost", 
           "Port": 5002
         }
-      ]
+      ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "15s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
     }
   ],
   "GlobalConfiguration": {

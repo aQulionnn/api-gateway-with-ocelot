@@ -79,3 +79,4 @@ D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\refin
 D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\AppHost.pdb
 D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\AppHost.genruntimeconfig.cache
 D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\ref\AppHost.dll
+D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\AppHost.sourcelink.json
