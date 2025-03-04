@@ -13,7 +13,28 @@ public class BookController(AppDbContext context) : ControllerBase
     [HttpGet]
     public IActionResult GetAll()
     {
-        var books = _context.Books.ToList();
+        var books = _context.Books
+            .Select(b => new
+            {
+                b.Id,
+                b.Title,
+                b.AuthorId
+            }).ToList();
+        
+        return Ok(books);
+    }
+
+    [HttpGet]
+    [Route("author/{id:int}")]
+    public IActionResult GetByAuthorId([FromRoute] int id)
+    {
+        var books = _context.Books.Where(b => b.AuthorId == id)
+            .Select(x => new
+            {
+                x.Id, 
+                x.Title
+            }).ToList();
+        
         return Ok(books);
     }
 }
