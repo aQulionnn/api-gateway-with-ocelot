@@ -1,0 +1,288 @@
+# Ignore appsettings.json
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Mono auto-generated files
+mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+# Cache and auto-generated files
+.vs/
+Generated\ Files/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Test-related files
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Benchmark results
+BenchmarkDotNet.Artifacts/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET scaffolding
+ScaffoldingReadMe.txt
+
+# Style analysis reports
+StyleCopReport.xml
+
+# Compilation artifacts
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah test files
+_Chutzpah*
+
+# C++ cache and project files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Profiler and tracing files
+*.psess
+*.vsp
+*.vspx
+*.sap
+*.e2e
+
+# Source control metadata
+$tf/
+*.gpState
+
+# IDE plugins and extensions
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+_TeamCity*
+*.dotCover
+.axoCover/*
+!.axoCover/settings.json
+
+# Code coverage reports
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+
+# NCrunch and similar tools
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+*.mm.*
+AutoTest.Net/
+
+# Web development
+.sass-cache/
+[Ee]xpress/
+
+# Documentation tools
+DocProject/buildhelp/
+DocProject/Help/*
+
+# Deployment and publishing
+publish/
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+PublishScripts/
+
+# Package management
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# Cloud services
+csx/
+*.build.csdef
+ecf/
+rcf/
+
+# Store apps
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.appxbundle
+*.appxupload
+
+# Cache files
+*.[Cc]ache
+!?*.[Cc]ache/
+
+# Miscellaneous
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Strong name keys (security risk)
+#*.snk
+
+# Old project conversion backups
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.rptproj.bak
+
+# Database files
+*.mdf
+*.ldf
+*.ndf
+
+# Business intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+*.rptproj.rsuser
+*- [Bb]ackup.rdl
+*- [Bb]ackup ([0-9]).rdl
+*- [Bb]ackup ([0-9][0-9]).rdl
+
+# Mocking and testing
+FakesAssemblies/
+
+# Documentation tools
+*.GhostDoc.xml
+
+# Node.js dependencies
+.ntvs_analysis.dat
+node_modules/
+
+# Legacy project files
+*.plg
+*.opt
+*.vbw
+
+# Additional build artifacts
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
+
+# Paket dependency manager
+.paket/paket.exe
+paket-files/
+
+# FAKE - F# build system
+.fake/
+
+# CodeRush settings
+.cr/personal
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Cake build tool
+# tools/**
+# !tools/packages.config
+
+# Telerik JustMock
+*.jmconfig
+
+# BizTalk
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+# OpenCover analysis
+OpenCover/
+
+# Local Azure emulator
+ASALocalRun/
+
+# MSBuild logs
+*.binlog
+
+# GPU debugger
+*.nvuser
+
+# Xamarin tools
+.mfractor/
+
+# Local history
+.localhistory/
+
+# Temporary database for health checks
+healthchecksdb
+
+# Package Reference conversion backups
+MigrationBackup/
+
+# Ionide (F# tools)
+.ionide/
+
+# Fody weaver
+FodyWeavers.xml
