@@ -42,3 +42,6 @@ D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\Ne
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\Ocelot.dll
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\obj\Debug\net8.0\ApiGateway.sourcelink.json
+D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\OcelotConfig\ocelot.aggregates.json
+D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\OcelotConfig\ocelot.authors.json
+D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\OcelotConfig\ocelot.books.json

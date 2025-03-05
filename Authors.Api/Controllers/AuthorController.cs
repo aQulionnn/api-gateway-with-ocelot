@@ -11,7 +11,7 @@ public class AuthorController(AppDbContext context) : ControllerBase
     private readonly AppDbContext _context = context;
 
     [HttpGet]
-    public ActionResult GetAll()
+    public IActionResult GetAll()
     {
         var authors = _context.Authors
             .Select(a => new
@@ -25,7 +25,7 @@ public class AuthorController(AppDbContext context) : ControllerBase
 
     [HttpGet]
     [Route("{id:int}")]
-    public ActionResult GetById([FromRoute] int id)
+    public IActionResult GetById([FromRoute] int id)
     {
         var author = _context.Authors
             .Where(a => a.Id == id)

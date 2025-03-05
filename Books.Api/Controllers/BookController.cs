@@ -1,10 +1,9 @@
-
 using Microsoft.AspNetCore.Mvc;
 using Shared.Data;
 
 namespace Books.Api.Controllers;
 
-[Route("/api/books")]
+[Route("api/books")]
 [ApiController]
 public class BookController(AppDbContext context) : ControllerBase
 {
