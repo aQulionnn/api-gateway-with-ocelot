@@ -45,3 +45,5 @@ D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\obj\Debug\net8.0\Ap
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\OcelotConfig\ocelot.aggregates.json
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\OcelotConfig\ocelot.authors.json
 D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\OcelotConfig\ocelot.books.json
+D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\OcelotConfig\ocelot.auth.json
+D:\bekasker\projects\test\api-gateway-with-ocelot\ApiGateway\bin\Debug\net8.0\OcelotConfig\ocelot.json

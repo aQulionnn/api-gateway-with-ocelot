@@ -80,3 +80,4 @@ D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\AppHo
 D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\AppHost.genruntimeconfig.cache
 D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\ref\AppHost.dll
 D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\AppHost.sourcelink.json
+D:\bekasker\projects\test\api-gateway-with-ocelot\AppHost\obj\Debug\net8.0\Aspire\references\Auth_Api.ProjectMetadata.g.cs

@@ -1,0 +1,16 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/auth/sign-in",
+      "UpstreamHttpMethod": ["POST"],
+      "DownstreamPathTemplate": "/api/auth/sign-in",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ]
+    }
+  ]
+}
