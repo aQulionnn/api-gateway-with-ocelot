@@ -1,4 +1,7 @@
+using System.Text;
 using Microsoft.AspNetCore.Authentication.BearerToken;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,8 +11,21 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services
-    .AddAuthentication(BearerTokenDefaults.AuthenticationScheme)
-    .AddBearerToken();
+    .AddAuthentication()
+    .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+    {
+        options.Authority = "https://localhost:5003";
+        options.Audience = "api-gateway";    
+        options.TokenValidationParameters = new TokenValidationParameters()
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("your-32-character-long-secret-key!!")),
+            ValidateIssuer = true,
+            ValidIssuer = "https://localhost:5003",
+            ValidateAudience = true,
+            ValidAudience = "api-gateway"
+        };
+    });
 
 var app = builder.Build();
 

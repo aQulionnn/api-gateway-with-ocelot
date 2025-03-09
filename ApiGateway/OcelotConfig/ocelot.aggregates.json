@@ -11,6 +11,10 @@
           "Port": 5001
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
       "Key": "GetAuthorById"
     },
     {
@@ -24,6 +28,10 @@
           "Port": 5002
         }
       ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
       "Key": "GetBooksByAuthorId"
     }
   ],
