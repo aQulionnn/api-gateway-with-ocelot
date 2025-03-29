@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Shared.Data.Common;
 using Shared.Data.Entities;
 
 namespace Shared.Data;
@@ -16,10 +17,10 @@ public class AppDbContext : DbContext
     private void SeedData()
     {
         if (!Authors.Any())
-            Authors.Add(new Author { Id = 1, Name = "Frank Herbert" });
+            Authors.Add(new Author { Id = new AuthorId(1), Name = "Frank Herbert" });
         
         if (!Books.Any())
-            Books.Add(new Book { Id = 1, Title = "Dune", AuthorId = 1 });
+            Books.Add(new Book { Id = new BookId(1), Title = "Dune", AuthorId = new AuthorId(1) });
     
         SaveChanges();
     }

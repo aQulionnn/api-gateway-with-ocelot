@@ -27,7 +27,7 @@ public class BookController(AppDbContext context) : ControllerBase
     [Route("author/{id:int}")]
     public IActionResult GetByAuthorId([FromRoute] int id)
     {
-        var books = _context.Books.Where(b => b.AuthorId == id)
+        var books = _context.Books.Where(b => b.AuthorId.Value == id)
             .Select(x => new
             {
                 x.Id, 

@@ -28,7 +28,7 @@ public class AuthorController(AppDbContext context) : ControllerBase
     public IActionResult GetById([FromRoute] int id)
     {
         var author = _context.Authors
-            .Where(a => a.Id == id)
+            .Where(a => a.Id.Value == id)
             .Select(a => new
             {
                 Id = a.Id, 
