@@ -6,7 +6,7 @@
       "AddQueriesToRequest": {},
       "AuthenticationOptions": {
         "AllowedScopes": [],
-        "AuthenticationProviderKey": null,
+        "AuthenticationProviderKey": "Bearer",
         "AuthenticationProviderKeys": []
       },
       "ChangeDownstreamPathTemplate": {},
@@ -83,7 +83,7 @@
       "AddQueriesToRequest": {},
       "AuthenticationOptions": {
         "AllowedScopes": [],
-        "AuthenticationProviderKey": null,
+        "AuthenticationProviderKey": "Bearer",
         "AuthenticationProviderKeys": []
       },
       "ChangeDownstreamPathTemplate": {},

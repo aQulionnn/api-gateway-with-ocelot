@@ -17,6 +17,7 @@ public class BookController(AppDbContext context) : ControllerBase
             {
                 b.Id,
                 b.Title,
+                b.Format.Name,
                 b.AuthorId
             }).ToList();
         
@@ -31,7 +32,8 @@ public class BookController(AppDbContext context) : ControllerBase
             .Select(x => new
             {
                 x.Id, 
-                x.Title
+                x.Title,
+                x.Format.Name
             }).ToList();
         
         return Ok(books);
