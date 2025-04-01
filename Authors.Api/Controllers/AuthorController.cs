@@ -1,14 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using Shared.Data;
-using Shared.Data.Entities;
+using Shared.Data.Data;
 
 namespace Authors.Api.Controllers;
 
 [Route("api/authors")]
 [ApiController]
-public class AuthorController(AppDbContext context) : ControllerBase
+public class AuthorController(IAppDbContext context) : ControllerBase
 {
-    private readonly AppDbContext _context = context;
+    private readonly IAppDbContext _context = context;
 
     [HttpGet]
     public IActionResult GetAll()

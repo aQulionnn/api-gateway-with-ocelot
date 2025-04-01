@@ -3,9 +3,9 @@ using Shared.Data.Common;
 using Shared.Data.Entities;
 using Shared.Data.Enums;
 
-namespace Shared.Data;
+namespace Shared.Data.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext : DbContext, IAppDbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
@@ -14,6 +14,9 @@ public class AppDbContext : DbContext
     
     public DbSet<Book> Books { get; set; }
     public DbSet<Author> Authors { get; set; }
+    
+    public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default) 
+        => await base.SaveChangesAsync(cancellationToken);
 
     private void SeedData()
     {

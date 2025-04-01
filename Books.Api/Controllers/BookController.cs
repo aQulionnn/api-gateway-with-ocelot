@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using Shared.Data;
+using Shared.Data.Data;
 
 namespace Books.Api.Controllers;
 
 [Route("api/books")]
 [ApiController]
-public class BookController(AppDbContext context) : ControllerBase
+public class BookController(IAppDbContext context) : ControllerBase
 {
-    private readonly AppDbContext _context = context;
+    private readonly IAppDbContext _context = context;
 
     [HttpGet]
     public IActionResult GetAll()
