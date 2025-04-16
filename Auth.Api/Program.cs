@@ -1,9 +1,12 @@
 using System.Text;
+using Auth.Api.Services;
 using Microsoft.AspNetCore.Authentication.BearerToken;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IAesService, AesService>();
 
 builder.Services.AddControllers();
 
