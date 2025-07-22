@@ -18,14 +18,14 @@ builder.Services
     .AddAuthentication()
     .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
     {
-        options.Authority = "https://localhost:5003";
+        options.Authority = "https://auth";
         options.Audience = "api-gateway";
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("your-32-character-long-secret-key!!")),
             ValidateIssuer = true,
-            ValidIssuer = "https://localhost:5003",
+            ValidIssuer = "https://auth",
             ValidateAudience = true,
             ValidAudience = "api-gateway"
         };
