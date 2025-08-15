@@ -30,6 +30,17 @@ builder.Services
         };
     });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy
+            .WithOrigins("https://localhost:5000")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -37,6 +48,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 
