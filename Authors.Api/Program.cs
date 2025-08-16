@@ -1,3 +1,4 @@
+using Authors.Api.Middlewares;
 using Shared.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +33,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<GatewayValidationMiddleware>();
 
 app.UseCors();
 

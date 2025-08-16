@@ -1,4 +1,5 @@
 using System.Text;
+using Auth.Api.Middlewares;
 using Auth.Api.Services;
 using Microsoft.AspNetCore.Authentication.BearerToken;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -48,6 +49,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<GatewayValidationMiddleware>();
 
 app.UseCors();
 
