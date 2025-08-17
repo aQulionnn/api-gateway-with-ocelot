@@ -1,3 +1,4 @@
+using Authors.Api.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Shared.Data.Data;
 
@@ -37,6 +38,14 @@ public class AuthorController(IAppDbContext context) : ControllerBase
         
         if (author == null)
             return NotFound();
+        
+        var etag = ETag.Generate(author);
+        
+        var requestETag = Request.Headers["If-None-Match"].FirstOrDefault();
+        if (requestETag == etag)
+            return StatusCode(StatusCodes.Status304NotModified);
+        
+        Response.Headers.ETag = etag;
         
         return Ok(author);
     }
