@@ -3,6 +3,8 @@ using Shared.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddMemoryCache();
+
 builder.Services.AddApplicationDbContext();
 
 builder.Services
