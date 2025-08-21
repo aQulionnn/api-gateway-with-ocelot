@@ -1,12 +1,16 @@
 using System.Text;
 using Auth.Api.Middlewares;
 using Auth.Api.Services;
+using Auth.Api.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddTransient<IEmailService, EmailService>();
+builder.Services.Configure<EmailSettings>(
+    builder.Configuration.GetSection("EmailSettings"));
+
+builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IAesService, AesService>();
 
 builder.Services.AddControllers();

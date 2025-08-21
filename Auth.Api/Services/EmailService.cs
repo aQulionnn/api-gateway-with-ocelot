@@ -1,29 +1,35 @@
+using Auth.Api.Dtos;
+using Auth.Api.Settings;
 using MailKit.Net.Smtp;
+using Microsoft.Extensions.Options;
 using MimeKit;
 using MimeKit.Text;
 
 namespace Auth.Api.Services;
 
-public class EmailService : IEmailService
+public class EmailService(IOptions<EmailSettings> emailSettings) 
+    : IEmailService
 {
-    public async Task SendEmailAsync(string name, string email, string subject, string body)
+    private readonly IOptions<EmailSettings> _emailSettings = emailSettings;
+    
+    public async Task SendEmailAsync(SendEmailDto request)
     {
         var message = new MimeMessage();
-        var from = new MailboxAddress("Admin", "admin@gmail.com");
-        var to = new MailboxAddress(name, email);
+        var from = new MailboxAddress(_emailSettings.Value.Username, _emailSettings.Value.Address);
+        var to = new MailboxAddress(request.Name, request.Email);
         
         message.From.Add(from);
         message.To.Add(to);
         
-        message.Subject = subject;
+        message.Subject = request.Subject;
         message.Body = new TextPart(TextFormat.Plain)
         {
-            Text = body
+            Text = request.Body
         };
 
         using var smtp = new SmtpClient();
 
-        await smtp.ConnectAsync("localhost", 1025);
+        await smtp.ConnectAsync(_emailSettings.Value.Host, _emailSettings.Value.Port);
         await smtp.SendAsync(message);
         await smtp.DisconnectAsync(true);
     }
@@ -31,5 +37,5 @@ public class EmailService : IEmailService
 
 public interface IEmailService
 {
-    Task SendEmailAsync(string name, string email, string subject, string body);
+    Task SendEmailAsync(SendEmailDto request);
 }
