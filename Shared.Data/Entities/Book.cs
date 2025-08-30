@@ -11,7 +11,7 @@ public class Book
     public FormatType Format
     {
         get => FormatType.FromValue(FormatValue) ?? throw new InvalidOperationException("Invalid format");
-        set => FormatValue = value.Value;
+        init => FormatValue = value.Value;
     }
 
     public AuthorId AuthorId { get; set; }

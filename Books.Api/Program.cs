@@ -1,7 +1,10 @@
 using Books.Api.Middlewares;
+using Books.Api.Repositories;
 using Shared.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 builder.Services.AddApplicationDbContext();
 

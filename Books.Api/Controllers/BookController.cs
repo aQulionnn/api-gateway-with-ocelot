@@ -1,3 +1,5 @@
+using Books.Api.Repositories;
+using Books.Api.Specifications;
 using Microsoft.AspNetCore.Mvc;
 using Shared.Data.Data;
 
@@ -5,10 +7,12 @@ namespace Books.Api.Controllers;
 
 [Route("api/books")]
 [ApiController]
-public class BookController(IAppDbContext context) : ControllerBase
+public class BookController(IAppDbContext context, IBookRepository bookRepository) 
+    : ControllerBase
 {
     private readonly IAppDbContext _context = context;
-
+    private readonly IBookRepository _bookRepository = bookRepository;
+    
     [HttpGet]
     public IActionResult GetAll()
     {
@@ -28,13 +32,15 @@ public class BookController(IAppDbContext context) : ControllerBase
     [Route("author/{id:int}")]
     public IActionResult GetByAuthorId([FromRoute] int id)
     {
-        var books = _context.Books.Where(b => b.AuthorId.Value == id)
+        var specification = new AuthorIdSpecification(id);
+        var books = _bookRepository
+            .GetBooksByAuthorId(id, specification)
             .Select(x => new
             {
                 x.Id, 
                 x.Title,
                 x.Format.Name
-            }).ToList();
+            });
         
         return Ok(books);
     }
