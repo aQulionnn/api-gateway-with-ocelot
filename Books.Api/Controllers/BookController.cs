@@ -27,21 +27,38 @@ public class BookController(IAppDbContext context, IBookRepository bookRepositor
         
         return Ok(books);
     }
+    
+    [HttpGet]
+    public IActionResult GetAllWithAuthor()
+    {
+        var specification = new BooksWithAuthorSpecification();
+        var books = _bookRepository
+            .GetAll(specification)
+            .Select(x => new
+            {
+                x.Id,
+                x.Title,
+                Author = x.Author.Name,
+                Format = x.Format.Name
+            });
+            
+        return Ok(books);
+    }
 
     [HttpGet]
     [Route("author/{id:int}")]
     public IActionResult GetByAuthorId([FromRoute] int id)
     {
         var specification = new AuthorIdSpecification(id);
-        var books = _bookRepository
-            .GetBooksByAuthorId(id, specification)
-            .Select(x => new
-            {
-                x.Id, 
-                x.Title,
-                x.Format.Name
-            });
+        var book = _bookRepository
+            .GetByAuthorId(id, specification);
         
-        return Ok(books);
+        return Ok(new
+        {
+            book.Id,
+            book.Title,
+            Author = book.Author.Name,
+            Format = book.Format.Name
+        });
     }
 }

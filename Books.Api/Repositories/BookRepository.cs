@@ -7,16 +7,24 @@ namespace Books.Api.Repositories;
 public class BookRepository(IAppDbContext context) : IBookRepository
 {
     private readonly IAppDbContext _context = context;
-    
-    public IEnumerable<Book> GetBooksByAuthorId(int authorId, Specification<Book> specification)
+
+    public IEnumerable<Book> GetAll(Specification<Book> specification)
     {
         return SpecificationQueryBuilder
             .GetQuery(_context.Books, specification)
             .ToList();
     }
+
+    public Book GetByAuthorId(int authorId, Specification<Book> specification)
+    {
+        return SpecificationQueryBuilder
+            .GetQuery(_context.Books, specification)
+            .Single();
+    }
 }
 
 public interface IBookRepository
 {
-    IEnumerable<Book> GetBooksByAuthorId(int authorId, Specification<Book> specification);
+    IEnumerable<Book> GetAll(Specification<Book> specification);
+    Book GetByAuthorId(int authorId, Specification<Book> specification);
 }
